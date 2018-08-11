@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/delete" transform="translate(4.000000, 3.000000)">
+            <g id="Group-3-Copy">
+                <path d="M12,0.777365983 L9.00025525,0.777365983 L8.14260189,0 L3.85739811,0 L2.99974475,0.777365983 L0,0.777365983 L0,2.33302449 L12,2.33302449 L12,0.777365983 Z M0.856632349,12.445268 C0.856632349,13.3004633 1.62852038,14 2.57193908,14 L9.42806092,14 C10.3714796,14 11.1433677,13.3004633 11.1433677,12.445268 L11.1433677,3.11131701 L0.856632349,3.11131701 L0.856632349,12.445268 Z" id="Fill-1" fill="#CCCCCC"></path>
+                <g id="Group" transform="translate(2.000000, 3.000000)" stroke="#FFFFFF" stroke-linecap="square">
+                    <path d="M1.5,0.5 L1.5,9.55538514" id="Line-2"></path>
+                    <path d="M6.5,0.5 L6.5,9.55538514" id="Line-2-Copy-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

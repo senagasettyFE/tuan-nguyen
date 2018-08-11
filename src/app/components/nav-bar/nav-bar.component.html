@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let sideNav of sideNavList" 
+    class="action-button {{ sideNav.active }}" 
+    (click)="click(sideNav)">
+    <span class="{{ sideNav.iconClass }}"></span>
+    <div class="menu-label">
+      <span>{{ sideNav.menuTitle }}</span>
+      <span>{{ sideNav.menuDetails }}</span>
+    </div>
+  </li>
+</ul>

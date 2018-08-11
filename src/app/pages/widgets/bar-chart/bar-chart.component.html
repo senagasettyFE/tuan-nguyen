@@ -1,0 +1,34 @@
+<div class="widget market-share">
+<div  *ngIf="chartvm" >
+    <div class="widget__info">
+        <cbre-mie-widget-header
+          [category]="categoryTitle"
+          [header]="title"
+          [subheader]="propertyTypes | uppercase"
+          [headerIcons]="headerIcons">
+        </cbre-mie-widget-header>
+      </div>
+      <div class="question">
+          WHAT IS CBRE'S RELATIVE MARKET SHARE TO OUR COMPETITORS?
+        </div>
+  <canvas baseChart
+    [chartType]="chartvm.chartType"
+    [data]="chartvm.chartData"
+    [labels]="chartvm.chartLabels"
+    [options]="chartvm.chartOptions"
+    [legend]="chartvm.chartLegend"
+    [colors]="chartvm.chartColors">
+  </canvas>
+</div>
+<div class="widget__footer">
+    <cbre-mie-source-updated [source]="source" [updated]="clientShareLastUpdate">
+    </cbre-mie-source-updated>
+    <div class="details" *ngIf="dashboard">
+      <button mat-button >
+        <span>DETAILS</span>
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
+

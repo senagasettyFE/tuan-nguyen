@@ -1,0 +1,53 @@
+{
+    "source":"EDP",
+    "updated": "2018-01-03 17:14:29",
+    "client":"Aegon",
+    "data":[
+            { 
+                "year":"2013",
+                "category":{
+                    "investor":1108000,
+                    "occupier":32000,
+                    "otherLos":197000,
+                    "total": 1337000
+                }
+            },
+            { 
+                "year":"2014",
+                "category":{
+                    "investor":1748000,
+                    "occupier":14000,
+                    "otherLos":261000,
+                    "total": 2023000
+                }
+            },
+            { 
+                "year":"2015",
+                "category":{
+                    "investor":2399000,
+                    "occupier":45000,
+                    "otherLos":325000,
+                    "total": 2769000
+                }
+            },
+            { 
+                "year":"2016",
+                "category":{
+                    "investor":1536000,
+                    "occupier":256000,
+                    "otherLos":633000,
+                    "total": 2425000
+                }
+            },
+            { 
+                "year":"2017",
+                "category":{
+                    "investor":1377000,
+                    "occupier":160000,
+                    "otherLos":835000,
+                    "total": 2372000
+                }
+            }
+        ]
+}
+

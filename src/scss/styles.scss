@@ -1,0 +1,30 @@
+@import "fonts";
+@import "variables";
+@import "icons";
+@import "mixins";
+@import "widget";
+@import "page";
+@import "buttons";
+
+@import "ngMaterial";
+
+// @import "header";
+
+// @import "login";
+// @import "responsive";
+
+/* Add application styles & imports to this file! 
+@import "~nouislider/distribute/nouislider.min.css";*/
+
+html * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ckc-sticky-client-select {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

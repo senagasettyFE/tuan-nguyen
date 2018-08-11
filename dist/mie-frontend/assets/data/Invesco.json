@@ -1,0 +1,53 @@
+{
+    "source":"EDP",
+    "updated": "2018-01-03 17:14:29",
+    "client":"Invesco",
+    "data":[
+            { 
+                "year":"2013",
+                "category":{
+                    "investor":7220000,
+                    "occupier":416000,
+                    "otherLos":410000,
+                    "total": 8046000
+                }
+            },
+            { 
+                "year":"2014",
+                "category":{
+                    "investor":18699000,
+                    "occupier":11102000,
+                    "otherLos":24000,
+                    "total": 19825000
+                }
+            },
+            { 
+                "year":"2015",
+                "category":{
+                    "investor":15866000,
+                    "occupier":373000,
+                    "otherLos":67000,
+                    "total": 16306000
+                }
+            },
+            { 
+                "year":"2016",
+                "category":{
+                    "investor":20472000,
+                    "occupier":589000,
+                    "otherLos":159000,
+                    "total": 21220000
+                }
+            },
+            { 
+                "year":"2017",
+                "category":{
+                    "investor":74730000,
+                    "occupier":829000,
+                    "otherLos":552000,
+                    "total": 76111000
+                }
+            }
+        ]
+}
+

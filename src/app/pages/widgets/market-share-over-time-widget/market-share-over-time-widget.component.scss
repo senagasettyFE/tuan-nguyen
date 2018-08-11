@@ -1,0 +1,65 @@
+@import './src/scss/_variables';
+@import './src/scss/_mixins';
+@import './src/scss/_widget';
+
+.widget {
+  .question {
+    &__details {
+      &__item {
+        // margin-right: 14.5%;
+        min-width: 33%;
+      }
+    }
+    font-size: 2.5em;
+    text-align: left;
+    border-bottom: 1px solid $border-default;
+  }
+}
+
+.no-mgmt-data {
+  font-family: $font-default-heavy;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.details {
+  margin-top: auto;
+  text-align: right;
+  ::ng-deep .mat-button {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    height: 20px;
+    background-color: transparent;
+    color: $cbre-refreshing;
+    @include color-transition(color);
+    font-family: $font-default-heavy;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+    .mat-icon {
+      width: 10px;
+      min-width: 15px;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+    &:hover {
+      color: lighten($cbre-refreshing, 5%);
+      @include color-transition(color);
+      .mat-icon {
+        color: lighten($cbre-refreshing, 5%);
+        @include color-transition(color);
+      }
+      .mat-ripple {
+        display: none;
+      }
+      .mat-button-focus-overlay {
+        display: none;
+      }
+    }
+    .mat-button-ripple {
+      display: none;
+    }
+  }
+}

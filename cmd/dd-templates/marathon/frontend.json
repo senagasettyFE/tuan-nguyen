@@ -1,0 +1,15 @@
+{
+  "id": "/micro/ckc/frontend",
+  "cmd": "docker run --rm --name ckc-frontend --log-driver=syslog -p 4410:80 -p 4411:443 -e ENV=ENV_NAME AWS_ACCOUNT.dkr.ecr.AWS_REGION.amazonaws.com/ECR_REPO:RECENT_PUSHED_VERSION",
+  "cpus": 0.5,
+  "mem": 1024,
+  "disk": 1024,
+  "instances": INSTANCE_COUNT,
+  "constraints": [
+    [
+      "rack_id",
+      "LIKE",
+      "micro"
+    ]
+  ]
+}

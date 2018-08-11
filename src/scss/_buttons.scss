@@ -1,0 +1,23 @@
+@import './src/scss/_variables';
+@import './src/scss/_mixins';
+
+.btn {
+  padding: 7px 15px;
+  border-radius: 2px;
+  font-family: $font-default-heavy;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &.btn-primary {
+    border: 1px solid $cbre-refreshing;
+    background: $cbre-refreshing;
+    color: #fff;
+  }
+
+  &.btn-default {
+    border: 1px solid #333;
+    background: #fff;
+    color: #424242;
+  }
+}

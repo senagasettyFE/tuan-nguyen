@@ -1,0 +1,26 @@
+<div class="example-container">
+  <table mat-table [dataSource]="dataSource">
+    <div *ngFor="let record of displayedColumns; let i = index">
+      <ng-container *ngIf="record === 'competitor'; else marketShares" matColumnDef="competitor" sticky>
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element"> {{element.competitor}} </td>
+      </ng-container>
+      <ng-template #marketShares>
+        <ng-container matColumnDef={{record}}>
+          <th id="marketShareHeader{{i}}" mat-header-cell *matHeaderCellDef> {{record}} </th>
+          <td id="marketShare{{i}}" mat-cell tooltip={{tooltip}} [options]='tooltipOptions' *matCellDef="let element">
+            {{setTooltip({cbreShare: element.cbreShare[i-1], cbrePyShare: element.cbrePyShare[i-1], topGain: element.topGain})}}
+            <svg height="50" width="50">
+              <line x1="0" y1="25" x2="50" y2="25" style="stroke:gray;stroke-width:1" />
+              <circle id="circle{{bubbleCounter}}" cx="25" cy="25" /> Sorry, your browser does not support inline SVG.
+            </svg>
+            {{setRadiusAndColor('circle'+bubbleCounter, element.radius[i-1])}} {{setBubbleCounter()}}
+          </td>
+        </ng-container>
+      </ng-template>
+    </div>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

@@ -1,0 +1,36 @@
+<div class="widget market-share">
+  <div class="widget__info">
+    <cbre-mie-widget-header 
+      [category]="categoryTitle"
+      [header]="title" 
+      [subheader]="propertyTypes | uppercase"
+      [headerIcons]="headerIcons"
+      (buttonClickEvent)="buttonClick($event)">
+    </cbre-mie-widget-header>
+  </div>
+  <div class="question">
+    IS CBRE INCREASING MARKET SHARE OVER TIME?
+  </div>
+  
+  <div class="widget__contents">
+    <div *ngIf="dataReady; else cantFetchData">
+      <cbre-mie-bubble-chart [chartvm]=bubbleChartData></cbre-mie-bubble-chart>
+    </div>
+    <ng-template #cantFetchData>
+      <div class="spinner">
+        <mat-spinner *ngIf="!errorOccured"></mat-spinner>
+        <cbre-mie-error *ngIf="errorOccured"></cbre-mie-error>
+      </div>
+    </ng-template>
+  </div>
+  <div class="widget__footer">
+    <cbre-mie-source-updated [source]="source" [updated]="clientShareLastUpdate">
+    </cbre-mie-source-updated>
+    <div class="details" *ngIf="dashboard">
+      <button mat-button (click)="buttonClick('details')">
+        <span>DETAILS</span>
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

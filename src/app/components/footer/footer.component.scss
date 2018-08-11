@@ -1,0 +1,13 @@
+@import '../../../scss/_variables';
+
+:host{
+  display: block;
+  padding: 15px 25px;
+  height: 68px;
+  border-top: 1px solid lighten($black, 80%);
+  font-size: 11px;
+  font-weight: bold;
+  color: lighten($black, 60%);
+  text-align: left;
+  background-color: lighten($black, 95%);
+}

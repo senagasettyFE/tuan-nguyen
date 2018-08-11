@@ -1,0 +1,22 @@
+{
+    "schema": [
+        {
+            "menuTitle": "Clients",
+            "iconClass": "person",
+            "menuDetails": "",
+            "active": "active"
+        },
+        {
+            "menuTitle": "Markets",
+            "iconClass": "public",
+            "menuDetails": "*Coming Soon*",
+            "active": ""
+        },
+        {
+            "menuTitle": "Admin Settings",
+            "iconClass": "person",
+            "menuDetails": "",
+            "active": ""
+        }
+    ]
+}

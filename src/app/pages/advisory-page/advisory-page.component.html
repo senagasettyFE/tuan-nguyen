@@ -1,0 +1,31 @@
+<mat-sidenav-container class="page-wrapper">
+  <mat-sidenav #sidenav>
+    <cbre-mie-nav-bar></cbre-mie-nav-bar>
+  </mat-sidenav>
+  <div class="content-wrapper dashboard">
+    <section class="leftnav">
+      <cbre-mie-nav-bar></cbre-mie-nav-bar>
+    </section>
+    <section class="main-content">
+      <div>
+        <cbre-mie-header></cbre-mie-header>
+      </div>
+      <section class="head">
+        <button class="mobile" mat-icon-button>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+      </section>
+      <section class="body">
+        <div class="widget-container widgets">
+          <div class="widgets__item">
+            <cbre-mie-widget [clientID]="renderedClientId" [widgetID]="0"></cbre-mie-widget>
+          </div>
+          <div class="widgets__item">
+            <cbre-mie-widget [clientID]="renderedClientId" [widgetID]="4"></cbre-mie-widget>
+          </div>
+        </div>
+      </section>
+      <cbre-mie-footer></cbre-mie-footer>
+    </section>
+  </div>
+</mat-sidenav-container>

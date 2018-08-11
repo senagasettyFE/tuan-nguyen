@@ -1,0 +1,104 @@
+@import './src/scss/_variables';
+@import './src/scss/_mixins';
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    padding: 15px 8px;
+    border-bottom: 1px solid rgba(255,255,255, 0.2);
+    background-color: transparent;
+    color: rgba(255,255,255, 0.7);
+    text-align: center;
+    @include color-transition(background-color);
+
+    span[class^="icon-"] {
+      color: rgba(255,255,255, 0.7);
+      font-size: 2rem;
+    }
+    span.icon-admin {
+      font-size: 1.6rem;
+    }
+    .menu-label {
+      margin-top: 3px;
+      span {
+        font-family: $font-default-bold;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      span+span {
+        display: block;
+      }
+    }
+    &:first-child {
+      padding: 30px 0 25px;
+      // span[class^="icon-"] {
+      //   font-size: 1.4rem;
+      // }
+    }
+    &.active {
+      background-color: $bg-leftnav-active;
+      span {
+        color: $white;
+      }
+    }
+    &:hover {
+      background-color: $bg-leftnav-active;
+      cursor: pointer;
+      @include color-transition(background-color);
+      span {
+        color: $white;
+      }
+
+    }
+  }
+}
+
+// :host {
+//     min-height: 800px;
+//     background: $cbre-refreshing-b;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+
+//     ul {
+//         padding: 0;
+//         margin-top: 0;
+//     }
+//     li {
+//         width: 60px;
+//         height: 40px;
+//         padding: 20px 10px;
+//         font-size: 8px;
+//         font-weight: bold;
+//         color: $white;
+//         text-transform: uppercase;
+//         list-style-type:none;
+//         vertical-align: middle;
+//         text-align: center;
+//         cursor: pointer;
+
+//         span {
+//             display: block;
+//         }
+//     }
+//     .action-button {
+
+//         &:hover, &.active {
+//             background: $cbre-primary;
+//         }
+//     }
+//     .user {
+//         position: absolute;
+//         top: 400px;
+//     }
+//     .tool-tip {
+//         font-size: 10px;
+//     }
+//     .icon-chevron-left {
+//         font-size: 14px;
+//         line-height: 3;
+//     }
+// }

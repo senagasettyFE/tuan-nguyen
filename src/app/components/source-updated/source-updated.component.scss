@@ -1,0 +1,81 @@
+@import './src/scss/_variables';
+
+.source-updated {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  bottom: 0;
+  margin: 10px 0 0 0;
+  width: 100%;
+  text-transform: uppercase;
+
+  .source, .updated {
+    font-size: 10px;
+    display: inline-block;
+    span {
+      color: lighten($black, 80%);
+      font-family: $font-default-bold;
+      // text-transform: uppercase;
+      vertical-align: top;
+    }
+    span + span {
+      display: inline-block;
+      margin-left: 10px;
+      color: lighten($black, 40%);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      // text-transform: uppercase;
+      &:active {
+        overflow: visible;
+      }
+    }
+  }
+  .source {
+    display: flex;
+    width: 49%;
+    span + span {
+      min-width: 70%;
+      margin-right: 20px;
+    }
+  }
+  .updated {
+    // min-width: 170px;
+    margin-left: auto;
+    // width: 45%;
+  }
+  @media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    flex-wrap: wrap;
+    .source, .updated {
+      span {
+        margin-bottom: 3px;
+      }
+    }
+  }
+}
+::ng-deep .my-tooltip {
+  white-space: pre-line;
+  font-size: 12px;
+  height: auto;
+}
+// .source-updated {
+//   display: inline-block;
+//   .source, .updated {
+//     display: inline-block;
+//     span {
+//       color: lighten($text-default, 40%);
+//       font-family: $font-default-bold;
+//       font-size: 1.2rem;
+//     }
+//     span + span {
+//       margin-left: 10px;
+//       color: $text-default;
+//     }
+//   }
+//   .updated {
+//     margin-left: 20px;
+//   }
+// }

@@ -1,0 +1,146 @@
+@import '../../../scss/_variables';
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  .leftnav {
+    width: 90px;
+    height: 100vh;
+    background: linear-gradient($bg-leftnav-top, $bg-leftnav-bottom);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .main-content {
+    width: calc(100% - 90px);
+    transform: translateX(90px);
+
+    @media screen and (max-width: 1024px) {
+      width: 100vw;
+      transform: translateX(0);
+    }
+    .head {
+      position: sticky;
+      top: 0;
+      background-color: $white;
+      z-index: 9999;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px -2px lighten($black, 40%);
+    }
+    .widget-container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 0px 48px 0px;
+      background-color: $white;
+      height: 100%;
+
+      &:after {
+        content: "";
+        position: absolute;
+          top: 0;
+          left: 0;
+        width: 10px;
+        height: 100%;
+        background-color: $white;
+      }
+    }
+    .widgets {
+      &__item {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-bottom: 1px solid $border-default;
+        border-right: 1px solid $border-default;
+        &:nth-child(2n) {
+          border-right: none;
+        }
+
+        box-shadow: none;
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: -12.5px;
+          bottom: -12.5px;
+          width: 25px;
+          height: 25px;
+          background-color: $white;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+	.widgets {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+	.widgets {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.widgets {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 1280px) and (max-width: 1919px) {
+	.widgets {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 1920px) {
+	.widgets {
+    &__item {
+      width: 50%;
+    }
+  }
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+	.mobile {
+    display: inline;
+    position: relative;
+    top: -4px;
+    left: 10px;
+  }
+  .leftnav {
+    display: none;
+  }
+  .main-content {
+    width: 100%;
+    .head {
+      border-bottom: 1px solid $border-default;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .main-content {
+    width: 100vw;
+    transform: translateX(0);
+  }
+}
+
+.mat-drawer {
+  width: 90px;
+  background: linear-gradient($bg-leftnav-top, $bg-leftnav-bottom);
+}

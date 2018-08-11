@@ -1,0 +1,110 @@
+/* base colors */
+
+$white: #ffffff;
+$black: #000000;
+
+/*
+lighten($black, 20%); 			#333333
+lighten($black, 40%); 			#666666
+lighten($black, 60%); 			#999999
+lighten($black, 80%); 			#cccccc
+lighten($black, 87%); 			#dedede
+lighten($black, 93%); 			#ededed
+lighten($black, 95%); 			#f2f2f2
+*/
+
+$disabled: #b2b2b2;
+/* Branding colors */
+$cbre-primary: #006a4d;             /* rgba(0,106,77,1) */
+$cbre-lime: #69be28;                /* rgba(105,190,40,1) */
+$cbre-enterprising: #004b35;        /* rgba(0,75,53,1) */
+$cbre-refreshing: #00a657;          /* rgba(0,166,87,1) */
+$cbre-energizing: #bfd857;          /* rgba(191,216,87,1) */
+
+$cbre-neutral: rgba(219, 213, 191, 1);
+$cbre-neutral65: rgba(236, 233, 221, 1);
+$cbre-neutral35: rgba(245, 243, 237, 1);
+
+$cbre-tertiary-blue: #00b2dd;       /* rgba(0,178,221,1) */
+$cbre-tertiary-magenta: #ec008c;    /* rgba(236,0,140,1) */
+$cbre-tertiary-purple: #a23f97;     /* rgba(162,63,151,1) */
+$cbre-tertiary-orange: #f58220;     /* rgba(245,130,32,1) */
+$cbre-tertiary-yellow: #ffdd00;     /* rgba(255,221,0,1) */
+$brand-red: #f46767;
+
+/* Text colors */
+$text-default: #4a4a4a;
+$text-default-light: #999999;
+$text-default-dark: #333333;
+$text-copyright: #999999;
+$text-summary-label: #666666;
+
+/* Font Used */
+$font-default: "Futura Book", Arial, Helvetica, sans-serif;
+$font-default-bold: "Futura Md BT", Arial, Helvetica, sans-serif;
+$font-default-heavy: "Futura Heavy", Arial, Helvetica, sans-serif;
+$font-default-extra: "Futura XBlk BT", Arial, Helvetica, sans-serif;
+
+/* Label colors */
+$placeholder-default: lighten($black, 60%);
+$label-default: #323437;
+
+/* Anchor colors */
+$link-default: $cbre-primary;
+$link-default-hover: $cbre-lime;
+$link-alt-light: #cadd6a;
+$link-alt-light-hover: $cbre-lime;
+
+$link-default: #00a657;
+
+/* Button colors */
+$button-primary: $cbre-refreshing;
+$button-cancel: $cbre-enterprising;
+$button-save: $cbre-primary;
+$button-publish: $cbre-refreshing;
+$button-text: $white;
+$button-text-hover: $cbre-energizing;
+
+/* Border colors */
+$border-default: lighten($black, 80%);
+
+/* Table colors */
+$table-bg: #e3ecf5;
+$table-th-bg: $cbre-refreshing;
+$table-row-alt-bg: #d1deec;
+$table-th-alt: darken(#f8f7f2, 5%);
+
+$table-white-bg: #ffffff;
+$table-white-th-bg: lighten($black, 80%);
+$table-white-row-alt-bg: lighten($black, 95%);
+
+$table-pagination: $cbre-primary;
+$table-text: #666666;
+
+/* Background colors */
+$bg-leftnav-top: #00a384;
+$bg-leftnav-bottom: #006a4d;
+$bg-leftnav-active: #006a4d;
+
+/* Others */
+// $color-global: $cbre-primary;
+// $color-americas: $cbre-tertiary-blue;
+// $color-emea: $cbre-tertiary-magenta;
+// $color-apac: $cbre-tertiary-purple;
+$color-subheader: $cbre-refreshing;
+$color-archiveheader: #f9bd00;
+$color-heroheader:#ebebeb;
+$color-total: #F58220;
+$color-investor: #006A4D;
+$color-occupier: #00B2DD;
+$color-other: #69BE28;
+$color-checkbox: #00a657;
+$color-opportunity-flow: #f99529;
+$color-revenue: #00b2dd;
+$color-client-share: #a23f97;
+$color-acct-mgt: #006a4d;
+$color-market-share: #a23f97;
+
+/* Widget Spec */
+$widget-height: 522px;
+$details-widget-height: 300px;

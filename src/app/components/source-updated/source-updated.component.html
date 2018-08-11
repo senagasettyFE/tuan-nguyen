@@ -1,0 +1,13 @@
+<div class="source-updated">
+  <div class="source" *ngIf="source">
+    <span>SOURCE</span>
+    <span [matTooltipClass]="'my-tooltip'" matTooltip="{{splitPipe(source)}}">{{source}}</span>
+  </div>
+  <div class="updated" *ngIf="updated">
+    <span *ngIf="webEdit; else dbData">UPDATED</span>
+    <ng-template #dbData>
+        <span>DATA UPLOADED</span>
+      </ng-template>
+    <span>{{updated}}</span>
+  </div>
+</div>

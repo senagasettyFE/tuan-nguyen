@@ -1,0 +1,6 @@
+<div *ngIf="widgetID===0">
+  <cbre-mie-lib-bar-chart [chartvm]="barChartdata" [clientId]="clientID" [filters]="filters"></cbre-mie-lib-bar-chart>
+</div>
+<div *ngIf="widgetID===4">
+  <cbre-mie-market-share-over-time-widget [clientId]="clientID" [filters]="filters" (filterClick)="openFilterDialog($event)"></cbre-mie-market-share-over-time-widget>
+</div>

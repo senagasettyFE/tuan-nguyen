@@ -1,0 +1,144 @@
+@import './src/scss/_variables';
+@import './src/scss/_mixins';
+// @import './src/scss/_widget';
+
+.widget-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $border-default;
+  // min-height: 60px;
+  &__contents {
+    .category-title {
+      position: relative;
+      padding-top: 5px;
+      padding-left: 15px;
+      font-family: $font-default-bold;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 1px;
+        width: 0;
+        height: 9px;
+        border-top: 7px solid transparent;
+        border-right: 7px solid $border-default;
+      }
+      &.client-share {
+        color: $color-client-share;
+        &:before {
+          border-right: 7px solid $color-client-share;
+        }
+      }
+      &.revenue {
+        color: $color-revenue;
+        &:before {
+          border-right: 7px solid $color-revenue;
+        }
+      }
+      &.opportunity-flow {
+        color: $color-opportunity-flow;
+        &:before {
+          border-right: 7px solid $color-opportunity-flow;
+        }
+      }
+      &.acct-mgt {
+        color: $color-acct-mgt;
+        &:before {
+          border-right: 7px solid $color-acct-mgt;
+        }
+      }
+      &.market-share {
+        color: $color-market-share;
+        &:before {
+          border-right: 7px solid $color-market-share;
+        }
+      }
+    }
+    .header {
+      padding-top: 5px;
+      color: $text-default-dark;
+      font-family: $font-default-heavy;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .subheader {
+      padding-top: 5px;
+      color: $text-default-light;
+      font-family: $font-default-bold;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      &__range {
+        font-family: $font-default-heavy;
+        font-size: 1.3rem;
+      }
+    }
+  }
+  &__options {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    min-width: 20%;
+    .options {
+      position: relative;
+        top: -5px;
+      text-align: right;
+      .mat-icon-button {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+      }
+    }
+    .details {
+      margin-top: auto;
+      text-align: right;
+      ::ng-deep .mat-button {
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        height: 20px;
+        background-color: transparent;
+        color: $cbre-refreshing;
+        @include color-transition(color);
+        font-family: $font-default-heavy;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 1.4rem;
+        text-transform: uppercase;
+        .mat-icon {
+          width: 10px;
+          min-width: 15px;
+          font-size: 2rem;
+          line-height: 2.4rem;
+        }
+        &:hover {
+          color: lighten($cbre-refreshing, 5%);
+          @include color-transition(color);
+          .mat-icon {
+            color: lighten($cbre-refreshing, 5%);
+            @include color-transition(color);
+          }
+          .mat-ripple {
+            display: none;
+          }
+          .mat-button-focus-overlay {
+            display: none;
+          }
+        }
+        .mat-button-ripple {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.min-height {
+  min-height: 60px;
+}

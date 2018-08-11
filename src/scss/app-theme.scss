@@ -1,0 +1,27 @@
+@import '../../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$edp-app-primary: mat-palette($mat-blue-grey, 700);
+$edp-app-accent:  mat-palette($mat-light-green, 600, A200, A100);
+$edp-app-warn:    mat-palette($mat-red);
+$edp-typography: mat-typography-config(
+    $font-family: 'Futura Book'
+);
+
+$edp-app-theme: mat-light-theme($edp-app-primary, $edp-app-accent, $edp-app-warn);
+
+@include angular-material-theme($edp-app-theme);
+// @include angular-material-typography($edp-typography);
+
+mat-sidenav-content {
+  overflow-x: hidden;
+}
+
+.mat-drawer-container {
+  overflow-x: hidden !important;
+}
+
+.mat-drawer-content {
+  overflow-x: hidden !important;
+}

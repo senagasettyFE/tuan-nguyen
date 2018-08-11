@@ -1,0 +1,27 @@
+{
+    "body": [
+        {   
+            "clientId": "3",
+            "publishedBy": "Yemi",
+            "status": "Published",
+            "strength": "<p>Client is very focused on increasing market share. Therefore,</p><ul><li>This is a good time to make sales pitch<li></ul>",
+            "weakness": "<p>Client is <strong>not listentening</strong> to sales pitch</p>",
+            "opportunity": "<p>Client ready to buy new space</p>",
+            "threat": "<p>Client does not like to spend a lot</p>"
+        },
+        {   
+            "clientId": "3",
+            "publishedBy": "Deepa",
+            "status": "Published",
+            "strength": "<p>Edited Online. Increasing market share.</p>",
+            "weakness": "<p>Edited Online. <strong>Not listentening</strong> to sales pitch</p>",
+            "opportunity": "<p>Edited Online. Ready to buy new space</p>",
+            "threat": "<p>Edited Online. Not spending a lot</p>"
+        }
+    ],
+    "footer": {
+        "lastUpdated": "JUN. 20, 2018",
+        "source": "Web Editor"
+    }
+}
+

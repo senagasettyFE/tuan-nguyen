@@ -1,0 +1,20 @@
+:host ::ng-deep {
+  [class^="icon-ckc-"], [class*=" icon-ckc-"] {
+      font-size: 22px;
+      margin-bottom: 7px;
+  }
+}
+.offline {
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+.head {
+  font-size: 1.8rem;
+}
+.subhead {
+  font-size: 1.4rem;
+}
+mat-icon {
+ color: green;
+}

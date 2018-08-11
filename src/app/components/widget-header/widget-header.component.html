@@ -1,0 +1,22 @@
+<div class="widget-header" [ngClass]="getWidgetClass()">
+  <div class="widget-header__contents">
+    <div class="category-title" *ngIf="dashboard" [ngClass]="getCategoryClass()">{{ category }}</div>
+    <div class="header" *ngIf="header">{{ header }}</div>
+  </div>
+  <div class="widget-header__options">
+    <div class="options">
+      <span *ngIf="headerIcons.download">
+        <cbre-mie-file-download [widgetId]="widgetId" (downloadClick)="buttonClick($event)"></cbre-mie-file-download>
+      </span>
+      <button mat-icon-button *ngIf="headerIcons.filter" (click)="buttonClick('filter')">
+        <span class="icon-filter"></span>
+      </button>
+      <button mat-icon-button *ngIf="headerIcons.edit && canDownload()" (click)="buttonClick('edit')">
+        <span class="icon-edit"></span>
+      </button>
+      <button mat-icon-button *ngIf="headerIcons.customize" class="open" (click)="buttonClick('customize')">
+        <span class="icon-table-customize"></span>
+      </button>
+    </div>
+  </div>
+</div>

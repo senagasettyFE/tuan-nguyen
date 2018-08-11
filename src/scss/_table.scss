@@ -1,0 +1,245 @@
+/* Table Styles */
+.table-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  &__search {
+    ::ng-deep .mat-form-field {
+      .mat-form-field-wrapper {
+        padding: 0;
+        .mat-form-field-flex {
+          .mat-form-field-infix {
+            padding: 0;
+            border: none;
+            input {
+              margin: 0;
+              padding: 14px 0 7px 5px;
+              height: 55px;
+              color: $text-default;
+              font-family: $font-default-bold;
+              font-size: 1.4rem;
+            }
+            input + .mat-icon {
+              position: absolute;
+                top: 18px;
+                right: 0;
+              color: $link-default;
+            }
+            .mat-form-field-label-wrapper {
+              top: 0;
+              padding: 0;
+              .mat-form-field-label {
+                top: 24px;
+                padding: 0 0 7px 5px;
+                font-family: $font-default-bold;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mat-form-field + span {
+      display: inline-block;
+      padding: 20px 0 0 20px;
+      color: $text-default;
+      font-family: $font-default-heavy;
+      font-size: 1.6rem;
+      vertical-align: top;
+    }
+  }
+  &__pagination {
+    margin-left: auto;
+    padding-top: 10px;
+  }
+}
+.long-table {
+  overflow-x: auto;
+  margin-top: 10px;
+  border-right: 1px solid $border-default;
+  
+  table, td, th {
+    border-collapse: collapse;
+  }
+
+  // .table-gradient {
+  //   position: absolute;
+  //   border-right: 1px solid $border-default;
+  //   height: calc(100% - 67px);
+  //   width: 24px;
+  //   transform: translateY(67px);
+  //   background: linear-gradient(to right, rgba(0,0,0,0.0) , rgba(0,0,0,0.04));
+  //   right: 0;
+  //   top: 0;
+  // }
+  table {
+    // margin-top: 10px;
+    width: 100%;
+    background-color: $white;
+    font-size: 1.3rem;
+    text-align: left;
+    cursor: all-scroll;
+
+    tr {
+      th, td {
+        padding: 7px;
+        // min-width: 100px;
+        color: $table-text;
+        font-weight: 400;
+      }
+    }
+    tr {
+      th {
+        // background-color: lighten($black, 95%);
+        background-color: $table-th-alt;
+        color: $text-default;
+        font-family: "Futura Bold Condensed", Verdana, Helvetica, Arial, sans-serif;
+        vertical-align: top;
+        text-transform: uppercase;
+        font-weight: 100;
+        .mat-icon {
+          position: relative;
+          top: 50%;
+          margin-top: -5px;
+          width: 20px;
+          height: 12px;
+          min-width: 10px;
+          min-height: 10px;
+          font-size: 1.6rem;
+        }
+      }
+      td {
+        background-color: $white;
+        font-family: $font-default-bold;
+        font-size: 1.4rem;
+      }
+      &:nth-child(even) {
+        background-color: lighten($black, 98%);
+      }
+    }
+  }
+}
+
+.long-table.sticky {
+  table {
+    tr {
+      th {
+        min-width: 154px;
+        border-top: 1px solid $border-default;
+        border-right: 1px solid $border-default;
+        border-bottom: 1px solid $border-default;
+        &:first-child {
+          left: 0;
+          position: sticky;
+          width: 150px;
+          background: $cbre-primary;
+          color: $white;
+          box-shadow: 0 -1px 0 0 $cbre-primary, 0 1px 0 0 $cbre-primary;
+          z-index: 11;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+      td {
+        min-width: 154px;
+        border-right: 1px solid $border-default;
+        border-bottom: 1px solid $border-default;
+        &:first-child {
+          position: sticky;
+          left: 0;
+          width: 150px;
+          background: $table-th-alt;
+          border-right: none;
+          color: $table-text;
+          font-weight: normal;
+          box-shadow: inset -1px 0px 0px 0px $border-default;
+          z-index: 10;
+        }
+        &:first-child:before {
+          content: "";
+          position: absolute;
+            top: 0;
+            left: 0;
+          height: 100%;
+          width: 1px;
+          background-color: $border-default;
+        }
+        &:last-child {
+          border-right: none;
+        }
+        &.clickable {
+          color: $link-default;
+          font-weight: bold;
+        }
+      }
+      &.total {
+        td {
+          color: $text-default-dark;
+          font-weight: bold;
+          background-color: darken(#f8f7f2, 10%);
+        }
+      }
+    }
+  }
+  table.simple {
+    tr {
+      td {
+        &:first-child {
+          min-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .sticky-multicol {
+  .long-table {
+    table {
+      tr {
+        th:first-child {
+          box-shadow: 1px 0px 0px 0px $border-default;
+        }
+        td:first-child {
+          color: $text-default !important;
+          font-weight: normal !important;
+          &:hover {
+            cursor: default;
+          }
+        }
+        th:nth-child(2), td:nth-child(2) {
+          position: sticky;
+          left: 154px;
+          width: 150px;
+          min-width: 150px;
+          background: $table-th-alt;
+          border-right: none;
+          // box-shadow: inset -1px 0px 0px 0px $border-default, inset 1px 0px 0px 0px $border-default;
+          // box-shadow: 1px 0px 0px 0px $border-default;
+          z-index: 20;
+        }
+        
+        th:nth-child(2) {
+          background-color: $cbre-primary !important;
+          box-shadow: 0 -1px 0 0 $cbre-primary, 0 1px 0 0 $cbre-primary, -1px 0px 0px 0px $border-default;
+          // box-shadow: 0 1px 0 0 $cbre-primary, 1px 0px 0px 0px $border-default;
+          color: $white !important;
+          z-index: 21;
+        }
+        td:nth-child(2) {
+          background: $table-th-alt !important;
+          box-shadow: 1px 0px 0px 0px $border-default;
+        }
+        // th:nth-child(2):before {
+        //   content: "";
+        //   position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //   height: 100%;
+        //   width: 1px;
+        //   background-color: $border-default;
+        // }
+      }
+    }
+  }
+}

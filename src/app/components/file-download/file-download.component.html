@@ -1,0 +1,32 @@
+<button class="btn-settings dashboardicons">
+	<div class="dashboardicons__download">
+		<button mat-icon-button [matMenuTriggerFor]="menuDownload" [disabled]="isDownloading">
+			<div *ngIf="isDownloading">
+				<div mat-icon-button class="download-spinner">
+					<mat-progress-spinner [diameter]="22" [strokeWidth]="3" [color]="'accent'" [mode]="'indeterminate'"></mat-progress-spinner>
+				</div>
+			</div>
+			<!-- <img *ngIf="!isDownloading" src="../../../assets/icons/ckc-icons/export.svg" class="widget__header__options__icon" alt="Export"> -->
+			<span *ngIf="!isDownloading" class="icon-export"></span>
+		</button>
+		<mat-menu #menuDownload="matMenu" class="download-options">
+			<button *ngIf="pngDownload" mat-menu-item (click)="downLoadCanvas('png', 'download.png')" class="download-options-btn">
+				<span class="icon-png"></span>
+				<span>PNG</span>
+			</button>
+			<button mat-menu-item (click)="click('excel')" class="download-options-btn" *ngIf="excelDownload()">
+				<span class="icon-excel"></span>
+				<span>EXCEL</span>
+			</button>
+
+			<button *ngIf="servicePlan.clientServicePlan" mat-menu-item (click)="downLoadClientServicePDF('service')" class="download-options-btn">
+				<span class="icon-png"></span>
+				<span>Client Service Plan</span>
+			</button>
+			<button *ngIf="servicePlan.valueDelivered" mat-menu-item (click)="downLoadClientServicePDF('account')" class="download-options-btn">
+				<span class="icon-png"></span>
+				<span>Value Delivered Document</span>
+			</button>
+		</mat-menu>
+	</div>
+</button>

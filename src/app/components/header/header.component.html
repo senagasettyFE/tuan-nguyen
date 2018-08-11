@@ -1,0 +1,28 @@
+<div class="header-bar">
+  <div class="header-bar__logo">
+    <span>MIE Dashboard</span>
+  </div>
+  <div class="header-bar__previous"> 
+  </div>
+  <div class="header-bar__user user">
+    <div class="user__info">
+      <span>Welcome,</span>
+      <span>{{ name }}</span>
+    </div>
+    <div class="user__avatar">
+      <mat-icon>account_circle</mat-icon>
+    </div>
+    <div class="user__profile-dropdown" [matMenuTriggerFor]="menuDropdown">
+      <mat-icon class="cursor">arrow_drop_down</mat-icon>
+    <mat-menu #menuDropdown="matMenu" class="download-options">
+      <button mat-menu-item class="download-options-btn">
+        <span class="icon-user-permission"></span>
+        <span class="menu-item">PROFILE SETTINGS</span>
+      </button>
+      <button mat-menu-item class="download-options-btn">
+        <span class="icon-logout"></span>
+        <span class="menu-item">SIGN OUT</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
